@@ -133,6 +133,7 @@ module GrapeSwagger
                         end
         end
         name          = (value.is_a?(Hash) && value[:full_name]) || param
+        puts "field name: #{name}"
         description = translate(description, scope,
                                 i18n_keys.map { |key| :"#{key}.params.#{name}" })
 
@@ -157,7 +158,6 @@ module GrapeSwagger
         end
 
         parsed_params.merge!(enum_or_range_values) if enum_or_range_values
-        puts "PARSED PARAMS: #{parsed_params}"
         parsed_params
       end
     end
