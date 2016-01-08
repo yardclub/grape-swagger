@@ -9,7 +9,8 @@ module GrapeSwagger
       'double' => %w(number double),
       'byte' => %w(string byte),
       'date' => %w(string date),
-      'dateTime' => %w(string date-time)
+      'dateTime' => %w(string date-time),
+      'hash' => %w(string hash)
     }
 
     def name
