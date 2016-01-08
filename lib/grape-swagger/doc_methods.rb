@@ -51,6 +51,8 @@ module GrapeSwagger
     end
 
     def parse_params(params, path, method, options = {})
+      #TODO: clean me up..
+      puts "PARSING PARMS!"
       scope = options[:scope]
       i18n_keys = expand_scope(options[:key])
       params ||= []
@@ -498,6 +500,8 @@ module GrapeSwagger
 
         apis = []
 
+        #TODO: clean me up..
+        puts "iterating on operations"
         ops.each do |path, op_routes|
           operations = op_routes.map do |route|
             endpoint = target_class.endpoint_mapping[route.to_s.sub('(.:format)', '')]
