@@ -85,6 +85,8 @@ module GrapeSwagger
                           'double'
                         when 'Symbol'
                           'string'
+                        when 'Array'
+                          'array'
                         when /^\[(?<type>.*)\]$/
                           items[:type] = Regexp.last_match[:type].downcase
                           if PRIMITIVE_MAPPINGS.key?(items[:type])
