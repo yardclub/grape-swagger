@@ -126,7 +126,7 @@ module GrapeSwagger
                          if is_primitive?(data_type)
                            'form'
                          else
-                           'notbody'
+                           'body'
                          end
                        else
                          'query'
@@ -157,6 +157,7 @@ module GrapeSwagger
         end
 
         parsed_params.merge!(enum_or_range_values) if enum_or_range_values
+        puts "PARSED PARAMS: #{parsed_params}"
         parsed_params
       end
     end
