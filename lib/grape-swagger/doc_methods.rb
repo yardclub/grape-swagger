@@ -10,7 +10,7 @@ module GrapeSwagger
       'byte' => %w(string byte),
       'date' => %w(string date),
       'dateTime' => %w(string date-time),
-      'hash' => %w(string hash)
+      'hash' => %w(hash)
     }
 
     def name
