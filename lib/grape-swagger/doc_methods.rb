@@ -61,11 +61,13 @@ module GrapeSwagger
 
       non_nested_parent_params = get_non_nested_params(parsed_array_params)
 
+      puts "non nested params: #{non_nested_parent_params.inspect}"
       non_nested_parent_params.map do |param, value|
         items = {}
 
         raw_data_type = value[:type] if value.is_a?(Hash)
         raw_data_type ||= 'string'
+        puts "raw data: #{raw_data_type}"
         data_type     = case raw_data_type.to_s
                         when 'Hash'
                           'object'
