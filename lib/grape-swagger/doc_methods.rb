@@ -97,6 +97,7 @@ module GrapeSwagger
                           @@documentation_class.parse_entity_name(raw_data_type)
                         end
 
+        puts "value: #{value.inspect}"
         additional_documentation = value.is_a?(Hash) ? value[:documentation] : nil
 
         if additional_documentation && value.is_a?(Hash)
@@ -125,7 +126,7 @@ module GrapeSwagger
                          if is_primitive?(data_type)
                            'form'
                          else
-                           'body'
+                           'notbody'
                          end
                        else
                          'query'
